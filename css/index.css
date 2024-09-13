@@ -1,0 +1,104 @@
+body{
+    margin: 0%;
+    margin-top: 2%;
+    background-color: black;
+}
+
+.nav{
+    border-top: 3px solid rgba(128, 0, 255, 0.700);
+    height: 7vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.anchor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    height: 80%;
+    border-bottom-left-radius: 10px;
+}
+
+.anchor:hover>a{
+    font-size: 1.8vw;
+}
+
+.anchor:hover{
+    box-shadow: 5px 5px 10px white;
+}
+
+.p{
+    background-color: rgba(128, 0, 255, 0.700);
+}
+.logo{
+    height: 100%;
+    width: 10%;
+    background-repeat: no-repeat;
+    background-size: 500%;
+    background-position: 50% 41%;
+    background-image: url(../img/logo.jpg);
+}
+
+a{
+    color: white;
+    font-size: 1.5vw;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+.title{
+    border-top: solid 3px rgba(128, 0, 255, 0.700);
+    border-bottom: solid 3px rgba(128, 0, 255, 0.700);
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/bho.gif);
+    background-position: center;
+    background-size: cover;
+}
+
+h1,h2{
+    color: rgba(128, 0, 255, 0.700);
+    text-shadow: 2px 2px rgba(120, 0, 255, 0.800);
+}
+
+h1{
+    font-size: 5vw;
+}
+
+.article{
+    margin-top: 5%;
+    height: 50vh;
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul{
+    padding-top: 5%;
+    height: 80%;
+    width: 40%;
+    border-radius: 10px;
+    font-size: 1.3vw;
+}
+
+li{
+    margin-bottom: 5%;
+    color: white;
+    
+}
+.suc{
+    border-radius: 20px;
+    height: 100%;
+    width: 50%;
+    box-shadow: 20px 20px 50px white;
+}
