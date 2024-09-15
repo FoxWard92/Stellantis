@@ -110,8 +110,8 @@ legend{color: azure;}
 label{color: azure;}
 
 fieldset>fieldset{
-    margin-bottom: 5%;
-    height: 30%;
+    margin: 1%;
+    height: 20%;
     width: 80%;
     display: flex;
     flex-direction: row;

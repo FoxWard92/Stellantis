@@ -92,6 +92,7 @@ ul{
 }
 
 li{
+    text-align: justify;
     margin-bottom: 5%;
     color: white;
     
