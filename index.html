@@ -23,7 +23,33 @@
             <li>Sviluppo e manutenzione di un sito web:Se richiesto è possibile commissionarci la creazione di un sito web e la relativa I siti non devono essere perforza relaitivi ai nostri eventi.</li>
             <li>Sicurezza:Ci occupiamo di: Bodyguard;Valutare i rischi per la salute e la sicurezza presenti;Eliminare o ridurre tali rischi sostituendoli alla fonte;Disc Jockey (Dj)Ci occupiamo di fornire un Dj nel caso in cui nella serata organizzata la discoteca non lo abbia.CantanteCi occupiamo di contattare il cantante richiesto dalla discoteca o di sceglierne uno noi nel caso la discoteca voglia così, ovviamente il costo del cantante si unisce al prezzo dell’evento,</li>
         </ul>
-        <div class="suc"> </div>
+        <div class="suc">
+            <img src="preview-image.jpg" alt="Anteprima Video" id="previewImage">
+            <button class="play-button" id="playButton">▶</button>
+            <video id="videoPlayer" controls>
+                <source src="./img/WhatsApp.mp4" type="video/mp4">
+                Il tuo browser non supporta il tag video.
+            </video>
+        </div>
     </div>
+    <script>
+        const previewImage = document.getElementById('previewImage');
+        const videoPlayer = document.getElementById('videoPlayer');
+        const playButton = document.getElementById('playButton');
+
+        previewImage.addEventListener('click', function() {
+            previewImage.style.display = 'none';
+            playButton.style.display = 'none';
+            videoPlayer.style.display = 'block';
+            videoPlayer.play();
+        });
+
+        playButton.addEventListener('click', function() {
+            previewImage.style.display = 'none';
+            playButton.style.display = 'none';
+            videoPlayer.style.display = 'block';
+            videoPlayer.play();
+        });
+    </script>
 </body>
 </html>
