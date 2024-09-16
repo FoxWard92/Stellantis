@@ -31,6 +31,7 @@ h3{
 
 .anchor:hover>a{
     font-size: 1.8vw;
+    
 }
 
 .anchor:hover{
@@ -40,6 +41,12 @@ h3{
 .p{
     background-color: rgba(128, 0, 255, 0.700);
 }
+
+.p:hover{
+    background-color: black;
+    box-shadow: none;
+}
+
 .logo{
     height: 100%;
     width: 10%;
