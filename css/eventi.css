@@ -1,149 +1,63 @@
-body{
-    margin: 0%;
-    margin-top: 2%;
-    background-color: black;
+@import url('./shared.css');
+
+/* ─── GALLERY GRID ─── */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
 }
 
-h3{
-    width: 100%;
-    text-align: center;
-    font-size: 3vw;
-    color: rgba(128, 0, 255, 0.700);
+.gallery-card {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid var(--border);
+  cursor: pointer;
 }
 
-.nav{
-    border-top: 3px solid rgba(128, 0, 255, 0.700);
-    height: 7vh;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: start;
+.gallery-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10,10,15,0.7) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
-.anchor{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 10%;
-    height: 80%;
-    border-bottom-left-radius: 10px;
+.gallery-card:hover::after {
+  opacity: 1;
 }
 
-.anchor:hover>a{
-    font-size: 1.8vw;
+.gallery-card .card-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 2;
 }
 
-.anchor:hover{
-    box-shadow: 5px 5px 10px white;
+.gallery-card:hover .card-overlay {
+  opacity: 1;
 }
 
-.p{
-    background-color: rgba(128, 0, 255, 0.700);
+.card-overlay a {
+  background: var(--purple);
+  color: white;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  transition: background 0.2s;
 }
 
-.p:hover{
-    background-color: black;
-    box-shadow: none;
-}
-
-.logo{
-    height: 100%;
-    width: 10%;
-    background-repeat: no-repeat;
-    background-size: 500%;
-    background-position: 50% 41%;
-    background-image: url(../img/logo.jpg);
-}
-
-a{
-    color: white;
-    font-size: 1.5vw;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-
-.title{
-    border-top: solid 3px rgba(128, 0, 255, 0.700);
-    border-bottom: solid 3px rgba(128, 0, 255, 0.700);
-    height: 30vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url(../img/bho.gif);
-    background-position: center;
-    background-size: cover;
-}
-
-h1,h2{
-    color: rgba(128, 0, 255, 0.700);
-    text-shadow: 2px 2px rgba(120, 0, 255, 0.800);
-}
-
-h1{
-    font-size: 5vw;
-}
-
-.article{
-    margin-top: 5%;
-    margin-left: 10%;
-    height: 40vh;
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.article>div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-size: cover;
-    background-position: center;
-    width: 30%;
-    height: 100%;
-    border-radius: 50px;
-    box-shadow: 10px 10px 40px rgba(128, 0, 255, 0.700);
-}
-
-.article>.h:hover{
-    opacity: 0.5;
-}
-
-
-.article>div>a{
-    padding: 10%;
-    border-radius: 30px;
-    background-color: rgba(128, 0, 255, 0.700);
-    display: none;
-}
-
-.article>div:hover>a{
-    display: block;
-}
-
-.banner1{
-    background-image: url(../img/banner1.jpg);
-}
-
-.banner2{
-    background-image: url(../img/banner2.jpg);
-}
-
-.banner3{
-    background-image: url(../img/banner3.jpg);
-}
-
-.banner11{
-    background-image: url(../img/b1.jpg);
-}
-
-.banner21{
-    background-image: url(../img/b2.jpg);
-}
-
-.banner31{
-    background-image: url(../img/b4.jpg);
+.card-overlay a:hover {
+  background: var(--purple-light);
+  color: var(--black);
 }

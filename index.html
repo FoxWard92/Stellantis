@@ -1,55 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index.css" type="text/css">
-    <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/index.css">
+  <title>Easy Disco – Organizziamo i tuoi eventi</title>
 </head>
 <body>
-    <div class="nav">
-        <div class="logo"></div>
-        <div class="anchor p"><a href="./index.html">Home</a></div>
-        <div class="anchor"><a href="./html/eventi.html">Servizi</a></div>
-        <div class="anchor"><a href="./html/prenota.html">Contattaci</a></div>
-    </div>
-    <div class="title">
-        <h1>Easy Disco</h1>
-        <h2>Organiziamo I tuoi Eventi</h2>
-    </div>
-    <div class="article">
-        <ul>
-            <li>Organizzazione Eventi:La discoteca, un locale, un comune o un cittadino ci contatta e ci descrive l’evento che vuole organizzare.Noi contattiamo gli artisti e organizziamo l’evento.</li>
-            <li>Sviluppo e manutenzione di un sito web:Se richiesto è possibile commissionarci la creazione di un sito web e la relativa I siti non devono essere perforza relaitivi ai nostri eventi.</li>
-            <li>Sicurezza:Ci occupiamo di: Bodyguard;Valutare i rischi per la salute e la sicurezza presenti;Eliminare o ridurre tali rischi sostituendoli alla fonte;Disc Jockey (Dj)Ci occupiamo di fornire un Dj nel caso in cui nella serata organizzata la discoteca non lo abbia.CantanteCi occupiamo di contattare il cantante richiesto dalla discoteca o di sceglierne uno noi nel caso la discoteca voglia così, ovviamente il costo del cantante si unisce al prezzo dell’evento,</li>
-        </ul>
-        <div class="suc">
-            <img src="preview-image.jpg" alt="Anteprima Video" id="previewImage">
-            <button class="play-button" id="playButton">▶</button>
-            <video id="videoPlayer" controls>
-                <source src="./img/WhatsApp.mp4" type="video/mp4">
-                Il tuo browser non supporta il tag video.
-            </video>
-        </div>
-    </div>
-    <script>
-        const previewImage = document.getElementById('previewImage');
-        const videoPlayer = document.getElementById('videoPlayer');
-        const playButton = document.getElementById('playButton');
 
-        previewImage.addEventListener('click', function() {
-            previewImage.style.display = 'none';
-            playButton.style.display = 'none';
-            videoPlayer.style.display = 'block';
-            videoPlayer.play();
-        });
+  <nav class="nav">
+    <div class="logo"></div>
+    <div class="nav-links">
+      <a href="./index.html" class="nav-link active">Home</a>
+      <a href="./html/eventi.html" class="nav-link">Servizi</a>
+      <a href="./html/prenota.html" class="nav-link">Contattaci</a>
+    </div>
+  </nav>
 
-        playButton.addEventListener('click', function() {
-            previewImage.style.display = 'none';
-            playButton.style.display = 'none';
-            videoPlayer.style.display = 'block';
-            videoPlayer.play();
-        });
-    </script>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Easy Disco</h1>
+      <h2>Organizziamo i tuoi eventi</h2>
+    </div>
+  </header>
+
+  <div class="divider"></div>
+
+  <main class="section">
+    <div class="services-grid">
+
+      <ul class="services-list">
+        <li>
+          <strong>Organizzazione eventi</strong>
+          La discoteca, un locale, un comune o un privato ci descrive l'evento desiderato. Noi contattiamo gli artisti e curiamo ogni dettaglio.
+        </li>
+        <li>
+          <strong>Sviluppo siti web</strong>
+          Progettiamo e manteniamo siti web su misura. I siti non devono essere necessariamente legati ai nostri eventi.
+        </li>
+        <li>
+          <strong>Sicurezza &amp; Bodyguard</strong>
+          Valutiamo e gestiamo i rischi per la salute e la sicurezza, eliminando o riducendo i pericoli alla fonte.
+        </li>
+        <li>
+          <strong>DJ &amp; Artisti</strong>
+          Forniamo un DJ professionale e contattiamo il cantante richiesto — o ne scegliamo uno noi in base al tipo di serata.
+        </li>
+      </ul>
+
+      <div class="video-box">
+        <img src="preview-image.jpg" alt="Anteprima video" id="previewImage">
+        <button class="play-button" id="playButton" aria-label="Riproduci video">▶</button>
+        <video id="videoPlayer" controls>
+          <source src="./img/WhatsApp.mp4" type="video/mp4">
+          Il tuo browser non supporta il tag video.
+        </video>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    &copy; 2024 Easy Disco — Tutti i diritti riservati
+  </footer>
+
+  <script>
+    const preview = document.getElementById('previewImage');
+    const video   = document.getElementById('videoPlayer');
+    const btn     = document.getElementById('playButton');
+    function startVideo() {
+      preview.style.display = 'none';
+      btn.style.display = 'none';
+      video.style.display = 'block';
+      video.play();
+    }
+    preview.addEventListener('click', startVideo);
+    btn.addEventListener('click', startVideo);
+  </script>
+
 </body>
 </html>

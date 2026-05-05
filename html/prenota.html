@@ -1,75 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/richiedi.css" type="text/css">
-    <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/richiedi.css">
+  <title>Easy Disco – Contattaci</title>
 </head>
 <body>
-    <div class="nav">
-        <div class="logo"></div>
-        <div class="anchor "><a href="../index.html">Home</a></div>
-        <div class="anchor "><a href="./eventi.html">Servizi</a></div>
-        <div class="anchor p"><a href="./prenota.html">Contattaci</a></div>
-    </div>
-    <div class="title">
-        <h1>Contattaci</h1>
-        <h2>Ti Inviamo preventivi su misura per te</h2>
-    </div>
-    <h3>Contattaci Direttamente Per Ricevere Un Preventivo</h3>
-    <div class="article">
-        <form action="">
-        <fieldset>
-            <legend>Informazioni Per Preventivo</legend>
-            <fieldset>
-                <legend>Informazioni Peronali</legend>
-                <div>
-                    <label for="name">Name:</label>
-                    <input type="text" name="name">       
-                </div>
-                <div>
-                    <label for="cognome">Cognome:</label>
-                    <input type="text" name="cognome">
-                </div>
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="email" name="email">
-                </div>
-                <div>
-                    <label for="tipo">Tipo:</label>
-                    <select name="tipo" id="tipo">
-                        <option value="Discoteca">Evento Publico</option>
-                        <option value="Eventi">Sito Web</option>
-                        <option value="Party">Party</option>
-                    </select> 
-                </div>
-                <div>
-                    
-                </div>
-                <div>
-                    <label for="colore">Tema:</label>
-                    <input list="colores" name="colore">
-                    <datalist id="colores">
-                        <option value="Moderno"></option>
-                        <option value="Alternativo"></option>
-                        <option value="Festoso"></option>
-                        <option value="Cerimonia"></option>
-                        <option value="Heppy"></option>
-                    </datalist>
-                </div>
-            </fieldset>
 
-            <fieldset>
-                <legend>Informazioni Generali</legend><textarea name="descrizione" id=""></textarea>
-            </fieldset>
-
-            <fieldset class="l">
-                <div><input type="reset" value="Cancella"></div>
-                <div><input type="submit" value="Invia"></div>
-            </fieldset>
-        </fieldset>
-    </form>
+  <nav class="nav">
+    <div class="logo"></div>
+    <div class="nav-links">
+      <a href="../index.html" class="nav-link">Home</a>
+      <a href="./eventi.html" class="nav-link">Servizi</a>
+      <a href="./prenota.html" class="nav-link active">Contattaci</a>
     </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Contattaci</h1>
+      <h2>Preventivi su misura per te</h2>
+    </div>
+  </header>
+
+  <div class="divider"></div>
+
+  <div class="contact-wrapper">
+
+    <aside class="contact-info">
+      <h3>Inizia a pianificare il tuo evento</h3>
+      <p>Compila il modulo con i dettagli della tua richiesta e ti invieremo un preventivo personalizzato entro 24 ore.</p>
+      <div class="contact-detail">
+        <span class="icon">✉</span>
+        info@easydisco.it
+      </div>
+      <div class="contact-detail">
+        <span class="icon">📞</span>
+        +39 000 000 0000
+      </div>
+      <div class="contact-detail">
+        <span class="icon">📍</span>
+        Torino, Italia
+      </div>
+    </aside>
+
+    <div class="form-card">
+      <h4>Richiedi un preventivo</h4>
+      <form action="" method="post">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name" placeholder="Mario" autocomplete="given-name">
+          </div>
+          <div class="form-group">
+            <label for="cognome">Cognome</label>
+            <input type="text" id="cognome" name="cognome" placeholder="Rossi" autocomplete="family-name">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="mario@esempio.it" autocomplete="email">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="tipo">Tipo di servizio</label>
+            <select id="tipo" name="tipo">
+              <option value="">Seleziona…</option>
+              <option value="Discoteca">Evento pubblico</option>
+              <option value="Web">Sito web</option>
+              <option value="Party">Festa privata</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="colore">Tema</label>
+            <input list="colores" id="colore" name="colore" placeholder="Seleziona o scrivi…">
+            <datalist id="colores">
+              <option value="Moderno">
+              <option value="Alternativo">
+              <option value="Festoso">
+              <option value="Cerimonia">
+              <option value="Happy">
+            </datalist>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="descrizione">Descrizione dell'evento</label>
+          <textarea id="descrizione" name="descrizione" placeholder="Raccontaci di più sul tuo evento: luogo, data, numero di ospiti, richieste particolari…"></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="reset" class="btn-reset">Cancella</button>
+          <button type="submit" class="btn-submit">Invia richiesta →</button>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    &copy; 2024 Easy Disco — Tutti i diritti riservati
+  </footer>
+
 </body>
 </html>
